@@ -21,6 +21,6 @@ Board.prototype.y = function() {
   return this._y;
 };
 
-exports.print = function() {
+exports.print = function createBoard() {
   return new Board(x, y);
 }
