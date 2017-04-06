@@ -1,0 +1,28 @@
+{
+  "name": "2d-board",
+  "version": "1.0.0",
+  "description": "Simple array wrapper for 2-dimensional grid-based games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quasimik/2d-board.git"
+  },
+  "keywords": [
+    "array",
+    "2d",
+    "grid",
+    "tile",
+    "game",
+    "board",
+    "arena"
+  ],
+  "author": "Michael Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quasimik/2d-board/issues"
+  },
+  "homepage": "https://github.com/quasimik/2d-board#readme"
+}
