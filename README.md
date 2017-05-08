@@ -79,6 +79,10 @@ Step functions are `up`, `down`, `left`, `right`, and they return `null` if out 
 You can set the oob flag to define out-of-bounds behavior:
 
 ```javascript
+// A B C
+// D E F
+// G H I
+
 board.setoob("OOB_SAME");
 var cell = [ 3, 0 ]; // 'F'
 var next = board.right(cell); // 'F' -> 'D'
@@ -161,7 +165,7 @@ console.log(cols); // [[ 0, 3 ], [ 1, 4 ], [ 2, 5 ]]
 
 ## Features & Notes
 
-* Permissive set methods. Handles any given array up to capacity, ignoring the rest.
+1. Permissive set methods. Handles any given array up to capacity, ignoring the rest.
 
 ```javascript
 var board = createNewBoard(3, 1);
@@ -172,16 +176,14 @@ board.row(0, [ 0, 1, 2, 3, 4 ]);
 // 3 and 4 are ignored.
 ```
 
-* Undefined values are skipped.
+2. Undefined values are skipped.
 
 ```javascript
-
-// Board:
 // A B C
 // D E F
 // G H I
 
-board.row(1, [ #, , # ]);
+board.row(1, [ '#', , '#' ]);
 
 // Yields the board:
 // A B C
@@ -189,7 +191,7 @@ board.row(1, [ #, , # ]);
 // G H I
 ```
 
-* As usual, array contents can be objects. Types can be mixed.
+3. As usual, array contents can be objects. Types can be mixed.
 
 ```javascript
 var item = { 'number': 4, 'elements': [ 123, 'abc' ] };
@@ -198,7 +200,7 @@ var board = createNewBoard(3, 1);
 board.row(0, row);
 ```
 
-* Due to the internal representation of the array, references to rows are more efficient than references to cols.
+4. Due to the internal representation of the array, references to rows are more efficient than references to cols.
 
 ```javascript
 // Assume a board with equal rows and cols, and homogeneous elements
