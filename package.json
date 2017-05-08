@@ -4,6 +4,7 @@
   "description": "Simple array wrapper for 2-dimensional grid-based games",
   "main": "index.js",
   "scripts": {
+    "start": "node ./test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
