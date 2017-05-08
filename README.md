@@ -165,7 +165,7 @@ console.log(cols); // [[ 0, 3 ], [ 1, 4 ], [ 2, 5 ]]
 
 ## Features & Notes
 
-1. Permissive set methods. Handles any given array up to capacity, ignoring the rest.
+* Permissive set methods. Handles any given array up to capacity, ignoring the rest.
 
 ```javascript
 var board = createNewBoard(3, 1);
@@ -176,7 +176,7 @@ board.row(0, [ 0, 1, 2, 3, 4 ]);
 // 3 and 4 are ignored.
 ```
 
-2. Undefined values are skipped.
+* Undefined values are skipped.
 
 ```javascript
 // A B C
@@ -191,7 +191,7 @@ board.row(1, [ '#', , '#' ]);
 // G H I
 ```
 
-3. As usual, array contents can be objects. Types can be mixed.
+* As usual, array contents can be objects. Types can be mixed.
 
 ```javascript
 var item = { 'number': 4, 'elements': [ 123, 'abc' ] };
@@ -200,7 +200,7 @@ var board = createNewBoard(3, 1);
 board.row(0, row);
 ```
 
-4. Due to the internal representation of the array, references to rows are more efficient than references to cols.
+* Due to the internal representation of the array, references to rows are more efficient than references to cols.
 
 ```javascript
 // Assume a board with equal rows and cols, and homogeneous elements
@@ -212,7 +212,7 @@ var row = board.row(0);
 var col = board.col(0);
 ```
 
-## Future developments
+## Future Developments
 
 * Custom comparator function for board merging
 * Hashmap for board representation, instead of using array
